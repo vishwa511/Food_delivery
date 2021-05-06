@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 1000px)" href="phone.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    /* overflow-x: hidden; */
+}
+body{
+    background-image: linear-gradient(#d9e9d9, #64ffff61,#ff63e58c);
+    
+}
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* LOGO AND IMAGE  */
+
+#logo{
+    margin: -10px 20px;
+
+}
+#logo img{
+    margin: 5px 20px;
+    height: 115px;
+}
+/* LIST STYLING */
+#navbar{
+    position: absolute;
+    top: 0px;
+}
+#navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#navbar::before{
+    content:"";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+#navbar ul li{
+    list-style: none;
+    /* margin: 2px 2px; */
+    margin: 10px 10px;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+    font-family: 'Bree Serif', serif;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 1s;
+    
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/*  HOME SECTION */
+
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content:"";
+    background: url(https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.79;
+    z-index: -1;
+    overflow: hidden;
+}
+#home p{
+    color: white;
+    text-align-last: center;
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+}
+.hprimary{
+    font-size: 3.8rem;
+    font-family: 'Baloo Bhai 2', cursive;
+    padding: 12px;
+    margin-top: 30px;
+}
+.btn{
+    padding: 5px 10px;
+    border: 2px solid white;
+    background-color: brown;
+    margin: 15px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(128, 32, 32);
+    color: rgb(177, 121, 121);
+}
+.hsecondary{
+    font-size: 2.8rem;
+    font-family: 'Baloo Bhai 2', cursive;
+    padding: 12px;
+}
+.centre{
+    text-align: center;
+}
+#services{
+    /* margin: 34px; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* border: 2px solid red; */
+    justify-content: space-evenly;
+}
+#services div img{
+    height: 160px;
+    width: 165px;
+    /* border-radius: 50px; */
+}
+.box p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.box {
+    /* flex-direction: row; */
+    border: 2px solid black;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-radius: 23px;
+    /* width: 30%; */
+}
+#clients-section{
+    height: 344px;
+}
+#clients-section::before{
+    content: "";
+    position: absolute;
+    background: url(https://marketingweek.imgix.net/content/uploads/2018/07/19113004/crm-relationship-people-social-750.jpg?auto=compress,format,&crop=faces,entropy,edges&fit=crop&q=60&w=750&h=460) no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+.clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 330px; */
+}
+.clients img{
+    height: 150px;
+    padding: 0px 35px;
+}
+#contact-section{
+    position: relative;
+}
+
+#contact-section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    background: url(https://www.wiggledigital.co.za/wp-content/uploads/2016/06/Contact-Us_Background.jpg) no-repeat center center/cover;
+}
+.form-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+    flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea{
+    width: 40%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 7px 5px 10px rgb(29, 209, 194);
+    /* background-image: linear-gradient(rgb(133, 92, 92), rgb(188, 26, 252)); */
+}
+#submit{
+    width: 20%;
+    margin:10px 10px;
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: aquamarine;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 9px 23px;
+}
+
+@media(max-width: 1000px){
+
+    *{
+        overflow-x: hidden;
+    }
+        /* navigation */
+#navbar{
+    flex-direction: column;
+}
+#logo img{
+    padding: 5px 5px;
+    height: 80px;
+}
+
+/* home */
+#home{
+    height: 480px;
+    top: 0px;
+    left: 0px;
+    padding:0px 15px;
+    margin-top: 70px;
+    padding-top: 70px;
+}
+#home::before{
+    height: 650px;
+    top:0px;
+}
+#navbar ul li{
+    margin: 5px;
+}
+#navbar ul li a{
+    padding:0px 20px;
+}
+#home p{
+    font-size: 0.5rem;
+    justify-content: center;
+    text-align: justify;
+}
+
+/* services */
+#ourservices{
+    margin-top: 30px;
+}
+#services{
+    flex-direction: column;
+}
+.box p{
+    font-size: 1.1em;
+}
+.hsecondary{
+    font-size: 36px ;
+    padding: 0px;
+    margin: -6px;
+}
+/* clients */
+#clients-section{
+    overflow: hidden;
+}
+.clients{
+    flex-wrap: wrap;
+
+}
+.clients img{
+    width: 80px;
+    height: 75px;
+    padding: 0px 21px;
+    overflow: auto;
+    
+}
+
+/* contact us  */
+.form-group input,
+.form-group textarea{
+    width: 80%;
+}
+
+/* footer  */
+
+/* utility clsses */
+.hprimary{
+    font-size: 36px;
+    padding: 5px 0px;
+    margin: -10px;
+}
+
+#home p{
+    font-size: 1.1rem;
+}
+}
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="https://th.bing.com/th/id/Rb61d10e4e0077e529d1e63da5aceebfc?rik=AoEmTFbpCLrioQ&riu=http%3a%2f%2fwww.newdesignfile.com%2fpostpic%2f2013%2f11%2famerican-eagle-logo-transparent_263287.png&ehk=TVPBjZaCU7bU3nrMgmp7xu8XllPHDm49NfWcmJZlpCE%3d&risl=&pid=ImgRaw" alt="logo" srcset="">
+        </div>
+
+        <ul>
+            <li class="item"><a href="#">HOME</a></li>
+            <li class="item"><a href="#services">SERVICES</a></li>
+            <li class="item"><a href="#clients-section">ABOUT</a></li>
+            <li class="item"><a href="#contact-section">CONTACT</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="hprimary">
+            Welcome to my online meal
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam accusantium molestiae corporis cumque error.
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquam.
+        </p>
+        <input class="btn" type="button" value="ORDER NOW">
+    </section>
+    <!-- <hr> -->
+
+    <section class="servicescont centre">
+        <h1 class="hprimary" id="ourservices"> OUR SERVICES</h1>
+        <div id="services">
+            <div class="box">
+                <img src="https://th.bing.com/th/id/R0916558f5421a9dbfb4d0fbc37ebc080?rik=454x%2bmFlnMclsA&riu=http%3a%2f%2fpluspng.com%2fimg-png%2ffry-food-png-hartz-krispy-fried-chicken-969.png&ehk=1%2brBlwuqqSK7LyzN5RfWXpvLE3Vvc7%2bc12SAFIFnf5c%3d&risl=&pid=ImgRaw" alt="" srcset="">
+                <h2 class="hsecondary centre">Food odering</h2>
+                <p class="centre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, nostrum consectetur illum ducimus, laudantium deleniti ratione quae Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem voluptatibus, nihil odio corporis vero quis!</p>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/R3298bf4d8f2fa600eb408cda093084b4?rik=4sr3DaE8jAtBHQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2ffood-png-burger-and-sandwich-butter-png-1113.png&ehk=Z%2bgRIfdj%2bL9cYN%2bBm3aeLeNKpPHoSpcC1Ui9%2bLV5zcY%3d&risl=&pid=ImgRaw" alt="" srcset="">
+                <h2 class="hsecondary centre">Food catering</h2>
+                <p class="centre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, nostrum consectetur illum ducimus, laudantium deleniti ratione quae itaque perferendis saepe cupiditate libero unde odio eaque, illo quisquam pariatur eos sed dolore odit quos consequatur? </p>
+            </div>
+            <div class="box">
+                <img src="https://th.bing.com/th/id/R253e18194b0ebf161f368fef59b32222?rik=ff98YApwm3%2ft1g&riu=http%3a%2f%2fpngimg.com%2fuploads%2fturkey_food%2fturkey_food_PNG27.png&ehk=2GY2xpfjSHWWYNsRp4nLRaW0h1fUT8C0rO9RBMtw2L4%3d&risl=&pid=ImgRaw" alt="" srcset="">
+                <h2 class="hsecondary centre">Bulk order</h2>
+                <p class="centre">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, nostrum consectetur illum ducimus, laudantium deleniti ratione quae itaque perferendis saepe cupiditate libero unde odio eaque, illo quisquam pariatur eos sed dolore odit quos consequatur? Lorem ip</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="clients-section">
+        <h1 class="hprimary centre">OUR CLIENTS</h1>
+        <div class="clients">
+            <img src="https://www.pinclipart.com/picdir/big/487-4874977_we-seamlessly-become-the-voice-of-your-company.png" alt="apple" srcset="">
+            <img src="https://th.bing.com/th/id/R3e77501a24d11b488457479d45da5527?rik=qARrvUTdpiXkWw&riu=http%3a%2f%2flogonoid.com%2fimages%2fbmw-logo.png&ehk=%2f8mRlmBDD47L2qEy6wIo29pJI9NQRVX5D2J8r41P1DE%3d&risl=&pid=ImgRaw" alt="apple" srcset="">
+            <img src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/2015/December/top-100-brands-logo-2015/6_500.png" alt="apple" srcset="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1200px-NASA_logo.svg.png" alt="apple" srcset="">
+            <img src="https://pngimg.com/uploads/adidas/adidas_PNG8.png" alt="apple" srcset="">
+        </div>
+    </section>
+    <section id="contact-section">
+        <h1 class="hprimary centre">CONTACT US</h1>
+        <form action="">
+            <div class="form-group">
+                <!-- <label for="Name">Name:</label> -->
+                <input type="text" name=name placeholder="Youe Name"> <br>
+                <!-- <label for="Email">Email</label> -->
+                <input type="email" name=email placeholder="Youe Email"><br>
+                <!-- <label for="Mobile number">Mobile number:</label> -->
+                <input type="Mobile number" name=Mobile number placeholder="Youe Mobile number"><br>
+                <!-- <label for="Name">feedbacks:</label> -->
+                <textarea name="feedback" id="" cols="30" rows="10" placeholder="yous suggestions"></textarea>
+                <input id="submit" type="button" value="Submit">
+            </div>
+        </form>
+    </section>
+    <footer>
+        <div class="centre">
+            Copyright &copy; www.myOnlineMeals.com. All Rights Reserved
+        </div>
+    </footer>
+</body>
+</html>
